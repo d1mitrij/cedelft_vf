@@ -1,0 +1,20 @@
+source_table,chapter,impact_category,unit,lower,central,upper,reliability_category,category_description
+Table 7,2.4.1,Climate change,EUR_2021/kg_CO2-eq.,0.05,0.13,0.16,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Ozone depletion,EUR_2021/kg_CFC-11-eq.,15.2,29.1,69.6,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Ionising radiation,EUR_2021/kBq_Co-60-eq.,0.00275,0.00422,0.00594,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,"Oxidant formation, human health",EUR_2021/kg_NOx-eq.,1.28,1.86,2.97,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,"Oxidant formation, terrestrial ecosystems",EUR_2021/kg_NOx-eq.,0.416,0.416,0.526,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Particulate matter formation,EUR_2021/kg_PM2.5-eq.,58.5,84.7,138.1,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Acidification,EUR_2021/kg_SO2-eq.,2.67,5.28,9.3,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Freshwater eutrophication,EUR_2021/kg_P-eq.,2.56,3.74,10.13,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Marine eutrophication,EUR_2021/kg_N-eq.,7.64,14.25,27.6,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Terrestrial ecotoxicity,EUR_2021/kg_1.4-DCB-eq.,0.00045,0.00064,0.00083,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Freshwater ecotoxicity,EUR_2021/kg_1.4-DCB-eq.,0.0148,0.0209,0.0271,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Marine ecotoxicity,EUR_2021/kg_1.4-DCB-eq.,0.0022,0.0032,0.0041,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,"Human toxicity, cancer-related",EUR_2021/kg_1.4-DCB-eq.,2.7,3.99,6.01,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,"Human toxicity, non-cancer-related",EUR_2021/kg_1.4-DCB-eq.,0.048,0.071,0.106,A,High certainty — recommended for all LCA applications
+Table 7,2.4.1,Land use,EUR_2021/m2_a_crop-eq.,0.07,0.099,0.128,B,Higher uncertainty — use with caution
+Table 7,2.4.1,Mineral extraction,EUR_2021/kg_Cu-eq.,0.0,0.014,0.0826,B,Higher uncertainty — use with caution
+Table 7,2.4.1,Fossil extraction,EUR_2021/kg_oil-eq.,0.0,0.028,0.163,B,Higher uncertainty — use with caution
+Table 7,2.4.1,Water consumption,EUR_2021/m3,0.0,0.407,0.811,B,Higher uncertainty — use with caution
+Table 7,2.4.1,NO2 mortality (addition),EUR_2021/kg_NOx-eq.,4.02,5.94,8.9,C,Outside ReCiPe; important for damage-cost completeness

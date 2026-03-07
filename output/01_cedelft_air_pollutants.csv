@@ -1,0 +1,21 @@
+source_table,chapter,pollutant_id,pollutant_name,lower,central,upper,unit,notes
+Table 3,2.3.1,CO2,Carbon dioxide,0.05,0.13,0.16,EUR_2021/kg,
+Table 3,2.3.1,CFC-11,Chlorofluorocarbons,283,725,926,EUR_2021/kg,
+Table 3,2.3.1,PM2.5,Particulate matter <2.5 um,55.4,81.2,134,EUR_2021/kg,"Use PM2.5 or PM10, not both"
+Table 3,2.3.1,PM10,Particulate matter <10 um,29.7,44.3,73.3,EUR_2021/kg,"Use PM2.5 or PM10, not both"
+Table 3,2.3.1,NOx,Nitrogen oxides,12.8,19.3,31.1,EUR_2021/kg,
+Table 3,2.3.1,SO2,Sulphur dioxide,16.9,26.6,45.3,EUR_2021/kg,
+Table 3,2.3.1,NH3,Ammonia,17.4,25.2,39.5,EUR_2021/kg,
+Table 3,2.3.1,NMVOC,Volatile organic compounds (non-methane),1.53,2.16,3.49,EUR_2021/kg,
+Table 3,2.3.1,CH4,Methane,1.8,4.68,5.77,EUR_2021/kg,
+Table 3,2.3.1,As,Arsenic,6271,9275,13980,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,Cd,Cadmium,105034,155294,233924,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,Cr-VI,Chromium VI,1815,2703,4121,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,Pb,Lead,18455,27287,41106,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,Hg,Mercury,9983,14951,23019,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,Ni,Nickel,68,126,257,EUR_2021/kg,Heavy metal
+Table 3,2.3.1,1.3-Butadiene,"1,3-Butadiene",1.37,1.91,2.87,EUR_2021/kg,Organic compound
+Table 3,2.3.1,Benzene,Benzene,0.275,0.394,0.593,EUR_2021/kg,Organic compound
+Table 3,2.3.1,BaP,Benzo(a)pyrene,3859,5704,8590,EUR_2021/kg,Organic compound / PAH
+Table 3,2.3.1,Dioxins,Dioxins,34071638,50367195,75846980,EUR_2021/kg,Organic compound; bioaccumulative
+Table 3,2.3.1,Formaldehyde,Formaldehyde,0.474,0.642,0.965,EUR_2021/kg,Organic compound

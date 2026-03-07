@@ -1,0 +1,45 @@
+source_table,chapter,pollutant_name,receiving_water,lower,central,upper,unit
+Table 4,2.3.2,Arsenic,freshwater,171,2411,11361,EUR_2021/kg
+Table 4,2.3.2,Arsenic,saltwater,0.061,188,958,EUR_2021/kg
+Table 4,2.3.2,Barium,freshwater,2.07,6.02,20,EUR_2021/kg
+Table 4,2.3.2,Barium,saltwater,0.0043,0.161,0.79,EUR_2021/kg
+Table 4,2.3.2,Benzo(a)anthracene,freshwater,0,33.9,43.9,EUR_2021/kg
+Table 4,2.3.2,Benzo(a)anthracene,saltwater,0,5.44,7.0,EUR_2021/kg
+Table 4,2.3.2,Benzo(a)pyrene,freshwater,100,148,223,EUR_2021/kg
+Table 4,2.3.2,Benzo(a)pyrene,saltwater,7.7,11.4,17.0,EUR_2021/kg
+Table 4,2.3.2,Cadmium,freshwater,3.06,31.5,144,EUR_2021/kg
+Table 4,2.3.2,Cadmium,saltwater,0.119,9.0,44.8,EUR_2021/kg
+Table 4,2.3.2,Carbendazim,freshwater,0.77,1.1,1.45,EUR_2021/kg
+Table 4,2.3.2,Carbendazim,saltwater,0.0138,0.0195,0.0252,EUR_2021/kg
+Table 4,2.3.2,Cypermethrin,freshwater,957,1360,1770,EUR_2021/kg
+Table 4,2.3.2,Cypermethrin,saltwater,122,174,230,EUR_2021/kg
+Table 4,2.3.2,Deltamethrin,freshwater,98,139,180,EUR_2021/kg
+Table 4,2.3.2,Deltamethrin,saltwater,9.0,12.7,16.5,EUR_2021/kg
+Table 4,2.3.2,Esfenvalerate,freshwater,1241,1760,2280,EUR_2021/kg
+Table 4,2.3.2,Esfenvalerate,saltwater,34,48.0,62.1,EUR_2021/kg
+Table 4,2.3.2,Fluoranthene,freshwater,10.3,14.6,19.2,EUR_2021/kg
+Table 4,2.3.2,Fluoranthene,saltwater,0.89,1.27,1.65,EUR_2021/kg
+Table 4,2.3.2,Phosphate,freshwater,0.845,1.23,3.34,EUR_2021/kg
+Table 4,2.3.2,Phosphate,saltwater,0,0,0,EUR_2021/kg
+Table 4,2.3.2,Imidacloprid,freshwater,0.267,0.386,0.541,EUR_2021/kg
+Table 4,2.3.2,Imidacloprid,saltwater,0.00325,0.00461,0.00598,EUR_2021/kg
+Table 4,2.3.2,Irgarol/Cybutryne,freshwater,0,2141,2772,EUR_2021/kg
+Table 4,2.3.2,Irgarol/Cybutryne,saltwater,0,58.1,75,EUR_2021/kg
+Table 4,2.3.2,Cobalt,freshwater,0.087,0.225,0.747,EUR_2021/kg
+Table 4,2.3.2,Cobalt,saltwater,0.0294,0.176,0.781,EUR_2021/kg
+Table 4,2.3.2,Copper,freshwater,2.21,3.46,5.56,EUR_2021/kg
+Table 4,2.3.2,Copper,saltwater,0.79,2.28,6.6,EUR_2021/kg
+Table 4,2.3.2,Mercury,freshwater,9.1,1346,6802,EUR_2021/kg
+Table 4,2.3.2,Mercury,saltwater,0.4,554,2819,EUR_2021/kg
+Table 4,2.3.2,Lambda-cyhalothrin,freshwater,734,1045,1364,EUR_2021/kg
+Table 4,2.3.2,Lambda-cyhalothrin,saltwater,140,202,270,EUR_2021/kg
+Table 4,2.3.2,Methylpirimiphos,freshwater,21.0,30.4,42.2,EUR_2021/kg
+Table 4,2.3.2,Methylpirimiphos,saltwater,0.318,0.453,0.597,EUR_2021/kg
+Table 4,2.3.2,Nickel,freshwater,9.9,37.7,140,EUR_2021/kg
+Table 4,2.3.2,Nickel,saltwater,0.219,4.7,23,EUR_2021/kg
+Table 4,2.3.2,Nitrate (N total),freshwater,2.27,4.23,8.19,EUR_2021/kg
+Table 4,2.3.2,Nitrate (N total),saltwater,7.64,14.3,27.6,EUR_2021/kg
+Table 4,2.3.2,Selenium,freshwater,0.215,0.513,1.59,EUR_2021/kg
+Table 4,2.3.2,Selenium,saltwater,0.073,0.358,1.53,EUR_2021/kg
+Table 4,2.3.2,Thallium,freshwater,7.3,149,733,EUR_2021/kg
+Table 4,2.3.2,Thallium,saltwater,0.106,25.0,140,EUR_2021/kg

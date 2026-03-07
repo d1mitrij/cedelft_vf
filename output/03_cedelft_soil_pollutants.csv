@@ -1,0 +1,22 @@
+source_table,chapter,pollutant_name,lower,central,upper,unit
+Table 5,2.3.3,Antimony (Sb),5.15,19.1,70.0,EUR_2021/kg
+Table 5,2.3.3,Anthracene,0.119,0.168,0.218,EUR_2021/kg
+Table 5,2.3.3,Arsenic (As),19.5,168,884,EUR_2021/kg
+Table 5,2.3.3,Barium (Ba),15.4,25.5,48.1,EUR_2021/kg
+Table 5,2.3.3,Benzo(a)anthracene,0,0.219,0.284,EUR_2021/kg
+Table 5,2.3.3,Benzo(a)pyrene,1.57,2.31,3.49,EUR_2021/kg
+Table 5,2.3.3,Cadmium (Cd),9.3,2224,11320,EUR_2021/kg
+Table 5,2.3.3,Chromium (Cr) III,0.00256,0.0092,0.0298,EUR_2021/kg
+Table 5,2.3.3,Phenanthrene,0.028,0.0403,0.052,EUR_2021/kg
+Table 5,2.3.3,Fluoranthene,0.13,0.18,0.243,EUR_2021/kg
+Table 5,2.3.3,Cobalt (Co),0.000557,0.094,0.551,EUR_2021/kg
+Table 5,2.3.3,Copper (Cu),0.0166,0.431,2.15,EUR_2021/kg
+Table 5,2.3.3,Mercury (Hg),1.69,280,1425,EUR_2021/kg
+Table 5,2.3.3,Lead (Pb),0.97,23.0,118,EUR_2021/kg
+Table 5,2.3.3,Molybdenum (Mo),4.57,28.0,143,EUR_2021/kg
+Table 5,2.3.3,Naphthalene,0.038,3.11,4.68,EUR_2021/kg
+Table 5,2.3.3,Nickel (Ni),5.8,45.1,287,EUR_2021/kg
+Table 5,2.3.3,Selenium (Se),0.00369,0.201,1.15,EUR_2021/kg
+Table 5,2.3.3,Tin (Sn),0.000143,0.0708,0.418,EUR_2021/kg
+Table 5,2.3.3,Vanadium (V),0.226,1.6,7.5,EUR_2021/kg
+Table 5,2.3.3,Zinc (Zn),0.051,787,4003,EUR_2021/kg
