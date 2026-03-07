@@ -164,20 +164,6 @@ from the handbook into `pipeline.py`.
 
 ---
 
-## Integration
-
-This pipeline follows the same structural pattern as the sibling projects in the
-transitionvaluation ecosystem:
-
-| Project | Source | Pattern |
-|---------|--------|---------|
-| `steen-vf1` | EPS 2015d.1 (Swedish LC Centre) | `config + pipeline + indicators/` |
-| `uba1` | UBA Handbook MC 4.0 (German EPA) | `config + pipeline + tables/` |
-| `vf_valuingimpact` | eQALY (Valuing Impact) | `config + pipeline + indicators/` |
-| **`vf_cedelft`** | **Environmental Prices Handbook 2024 (CE Delft)** | **`config + pipeline + tables/`** |
-
----
-
 ## Limitations
 
 - **EU27 averages only:** Values not suitable for site-specific studies or countries

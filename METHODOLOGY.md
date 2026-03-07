@@ -273,8 +273,8 @@ between the Individualist and Egalitarian perspectives of ReCiPe 2016.
 | EPS 2015d.1 | Swedish Life Cycle Centre | Global (uniform) | EUR 2015 | 2016 |
 | eQALY | Valuing Impact | Global (188 countries) | USD 2023 | 2024 |
 
-The CE Delft prices are used as the source for the `NatCap_Pollution` indicator in the
-eQALY framework (vf_valuingimpact), confirming cross-system integration.
+The CE Delft prices are also cited in the eQALY framework (Valuing Impact, 2025)
+as the source for natural capital pollution valuation factors.
 
 ---
 

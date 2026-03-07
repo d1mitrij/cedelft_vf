@@ -14,7 +14,7 @@
 **Rationale:**
 - PDF-extracted text (pypdf) has formatting issues; runtime parsing would be fragile
 - Hard-coding ensures exact, verifiable values with full audit trail
-- Identical pattern to sibling projects (uba1, steen-vf1) for ecosystem consistency
+- Consistent pattern (config + pipeline + tables/) for structural clarity
 - All values verified against two independent locations in the handbook (summary
   tables in Chapter 1 and detailed tables in Chapter 2)
 
@@ -31,7 +31,7 @@ rather than wide pivot tables or HDF5 matrices.
 - CE Delft data is not a country × sector matrix (unlike EPS/eQALY) — it is a flat
   list of substance prices, making HDF5 unnecessary overhead
 - Tidy format is directly importable into pandas, R, Excel, and database systems
-- Matches the uba1 pattern exactly (same scope of non-country-differentiated data)
+- Appropriate for non-country-differentiated flat substance price data
 - Human-readable without tooling
 
 ---
@@ -45,7 +45,7 @@ as separate rows with a `receiving_water` column, rather than as separate column
 - Maintains tidy format — one measurement per row
 - Allows easy filtering by receiving water body
 - Avoids column explosion (6 value columns instead of 3)
-- Consistent with how other multi-medium tables are handled in uba1
+- Enables easy filtering by receiving water body
 
 ---
 
@@ -86,7 +86,7 @@ and a separate "Metadata" sheet containing full handbook attribution.
 - Excel is the primary delivery format for non-technical stakeholders
 - CE Delft handbook attribution must be prominently visible in every output file
 - Formatted headers improve readability for direct use in SCBA/LCA spreadsheets
-- Matches the uba1 formatting convention for ecosystem consistency
+- CE Delft attribution is prominently visible in every output file
 
 ---
 
@@ -96,7 +96,7 @@ and a separate "Metadata" sheet containing full handbook attribution.
 supporting selective extraction (`--only`) and group listing (`--list`).
 
 **Rationale:**
-- Mirrors uba1 `extract_uba_values.py` interface for consistent developer experience
+- Consistent CLI interface for selective extraction and listing
 - `--only` enables fast partial updates when a single table needs refreshing
 - Timestamped execution log provides audit trail of extraction runs
 - Individual table scripts (`tables/NN_*.py`) allow independent testing
@@ -110,9 +110,7 @@ supporting selective extraction (`--only`) and group listing (`--list`).
 **Rationale:**
 - Total extraction time is under 0.5 seconds — parallelism provides no benefit
 - Sequential execution simplifies debugging and log output
-- Matches uba1 approach (same fast-running scenario)
-- steen-vf1 and eQALY use parallelism because they perform XLSX parsing and
-  matrix population, which is computationally heavier
+- All 6 table groups complete in under 0.5 s — parallelism provides no benefit
 
 ---
 
@@ -167,4 +165,4 @@ handbook citation and the Greenings/Euler/Claude pipeline authorship.
 - Output files are often shared independently of the repository
 - CE Delft's intellectual property must be attributed at the point of use
 - Users encountering a standalone `.xlsx` file must be able to trace the source
-- Mirrors the approach in uba1 where publication metadata is embedded in Excel output
+- Standalone files remain fully traceable to their source
