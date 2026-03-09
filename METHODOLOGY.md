@@ -273,32 +273,172 @@ calibrated to EU27 conditions — population exposure, emission sources, dispers
 meteorology, and receptor densities are all EU27-specific. The result is a single
 set of EU27 average values at EUR 2021 price levels.
 
-### Value transfer for non-EU use
+### Value transfer guidance for non-EU use
 
 If these values are applied outside the EU27, a value transfer procedure is required.
 CE Delft documents the following guidance:
 
 | Transfer type | Approach | Key parameter |
 |---|---|---|
-| **Temporal** | Inflate using country-specific CPI or GDP deflator | Eurostat HICP (EU) |
-| **Geographic (income)** | Scale by income elasticity: `VF_country = VF_EU27 × (GNI_country / GNI_EU27)^ε` | Income elasticity ε = 0.3–1.0 (per VOLY variant) |
+| **Temporal** | Inflate using country-specific CPI or GDP deflator | Eurostat HICP (EU); national CPI |
+| **Geographic (income)** | Scale by income elasticity: `VF_country = VF_EU27 × (GNI_country / GNI_EU27)^ε` | ε = 0.3–1.0 (per VOLY variant) |
 | **Geographic (exposure)** | Adjust population exposure and emission density | Country-specific dispersion model required |
 
 The three uncertainty variants (lower / central / upper) embed different income
 elasticity assumptions (0.3, 0.65, 1.0) that indirectly capture some geographic
 income variation.
 
-### External sources used in derivation
+---
 
-| Stage | External source | Role |
-|---|---|---|
-| Dispersion modelling | EEA/GAINS model (2021), SHERPA | Concentration mapping for air pollutants |
-| Dose-response | Chen & Hoek (2020); WHO HRAPIE (2013); IARC | CRFs for PM, NO₂, O₃, carcinogens |
-| Ecosystem valuation | Costanza et al. (2014); Kuik (2008) | Biodiversity / ecosystem service values |
-| Characterisation factors | ReCiPe 2016 H (Huijbregts et al. 2017) | Midpoint → endpoint; secondary pollutant prices |
-| PEF categorisation | EC JRC EF 3.0 (2018); EN 15804-A2 | CAT I/II assignment for Table 8 |
-| EU mortality valuation | VOLY — ExternE / NEEDS project (2008) | Value of Life Year Lost |
-| Water framework | EU WFD priority substances list | Table 4 substance selection |
+### External Sources Used in IPA Derivation — License Detail
+
+The Impact Pathway Approach used to derive the EU27 environmental prices draws on
+the following external sources. Each source is documented with its precise license
+terms, as their licenses govern the downstream use of the derived coefficient matrices.
+
+#### 8.1 EEA / GAINS Dispersion Model (2021) — SHERPA
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Air pollutant concentration mapping on 22×33 km grid (IPA Step 2); NO₂ at 1×1 km resolution |
+| **Full citation** | European Environment Agency / IIASA (2021). GAINS emission scenarios and SHERPA air quality dispersion modelling. EEA, Copenhagen. |
+| **License** | **CC BY** (EEA Data Policy: all EEA materials free for commercial and non-commercial reuse with source acknowledgement) |
+| **Commercial use** | ✓ Yes |
+| **Attribution required** | Yes — "Source: European Environment Agency" |
+| **License URL** | https://www.eea.europa.eu/en/datahub/eea-data-policy |
+
+---
+
+#### 8.2 IIASA GAINS Model — Emission Inventories
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Emission inventories and source-receptor matrices for PM/NOₓ/SO₂/NH₃ (IPA Step 1 and Step 3) |
+| **Full citation** | Klimont, Z. et al. GAINS (Greenhouse Gas and Air Pollution Interactions and Synergies) model. IIASA, Laxenburg, Austria. https://gains.iiasa.ac.at |
+| **License** | **CC BY-NC 4.0** (IIASA Terms of Use) |
+| **Commercial use** | ✗ Non-commercial only |
+| **Attribution required** | Yes — cite IIASA and GAINS model |
+| **Redistribution** | Restricted — no extraction of substantial database portions |
+| **License URL** | https://iiasa.ac.at/terms-of-use |
+
+---
+
+#### 8.3 WHO / Chen & Hoek (2020) — PM Concentration-Response Functions
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | PM₂.₅ and PM₁₀ mortality concentration-response functions (IPA Step 3); replaces older HRAPIE PM functions in 2024 edition |
+| **Full citation** | Chen, J. and Hoek, G. (2020). Long-term exposure to PM and all-cause and cause-specific mortality: A systematic review and meta-analysis. *Environment International*, 143, 105974. |
+| **License** | **CC BY 4.0** (Elsevier open access article) |
+| **Commercial use** | ✓ Yes |
+| **Attribution required** | Yes — cite Chen & Hoek 2020 |
+| **License URL** | https://doi.org/10.1016/j.envint.2020.105974 |
+
+---
+
+#### 8.4 WHO HRAPIE (2013) — O₃ and NO₂ Concentration-Response Functions
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | O₃ and NO₂ concentration-response functions (IPA Step 3); NOₓ/SO₂ non-primary impacts in 2024 edition |
+| **Full citation** | WHO Regional Office for Europe (2013). *Health Risks of Air Pollution in Europe — HRAPIE Project*. WHO Regional Office for Europe, Copenhagen. |
+| **License** | **© WHO 2013 — All rights reserved** (published before WHO's November 2016 open-access policy) |
+| **Commercial use** | ✗ Permission required from WHO |
+| **Attribution required** | Yes — cite WHO HRAPIE 2013 |
+| **Redistribution** | Restricted; short quotation with attribution permitted |
+| **License URL** | https://www.who.int/about/policies/publishing/open-access |
+
+---
+
+#### 8.5 Costanza et al. (2014) — Global Ecosystem Service Values
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Unit ecosystem service values (USD/ha/yr) used in biodiversity and land use valuation (Table 6; ecosystem damage pathway) |
+| **Full citation** | Costanza, R., de Groot, R., Sutton, P., van der Ploeg, S., Anderson, S.J., Kubiszewski, I., Farber, S., Turner, R.K. (2014). Changes in the global value of ecosystem services. *Global Environmental Change*, 26, 152–158. |
+| **License** | **All rights reserved — Elsevier B.V.** (paywalled journal article; standard academic copyright) |
+| **Commercial use** | ✗ Reproduction requires Elsevier permission |
+| **Attribution required** | Yes — cite Costanza et al. 2014 with DOI |
+| **Redistribution** | ✗ Not permitted without publisher permission |
+| **License URL** | https://doi.org/10.1016/j.gloenvcha.2014.04.002 |
+
+---
+
+#### 8.6 Brander, Kuik et al. (2008) — Ecosystem Value Transfer
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Meta-analytic value transfer methodology for scaling ecosystem service unit values to EU27 context |
+| **Full citation** | Brander, L.M., Ghermandi, A., Kuik, O., Markandya, A., Nunes, P.A.L.D., Schaafsma, M., Wagtendonk, A. (2012). Scaling up ecosystem services values: methodology, applicability, and a case study. *AMBIO*, 41, 780–793. (Earlier version: EEA working paper 2008.) |
+| **License** | EEA working paper version: **CC BY** (EEA Data Policy). Journal version: Springer/AMBIO academic copyright. |
+| **Commercial use** | EEA version: ✓ Yes. Journal version: requires permission |
+| **Attribution required** | Yes — cite Brander, Kuik et al. |
+| **License URL** | https://www.eea.europa.eu |
+
+---
+
+#### 8.7 ReCiPe 2016 H — Midpoint Characterisation Factors
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Midpoint characterisation factors (IPA Step 3 → Tables 7–8); secondary pollutant derivation (IPA Step 4) |
+| **Full citation** | Huijbregts, M.A.J. et al. (2017). ReCiPe2016: a harmonised life cycle impact assessment method at midpoint and endpoint level. *International Journal of Life Cycle Assessment*, 22(2), 138–147. RIVM Report 2016-0104. |
+| **License** | **CC BY 4.0** (open-access journal article; RIVM repository open access) |
+| **Commercial use** | ✓ Yes |
+| **Attribution required** | Yes — cite Huijbregts et al. 2017 |
+| **License URL** | https://doi.org/10.1007/s11367-016-1246-y |
+
+---
+
+#### 8.8 EC JRC EF 3.0 — PEF Characterisation Factors
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | CAT I/II classification for Table 8; EF 3.0 characterisation factors for 9 PEF midpoint categories |
+| **Full citation** | Saouter, E. et al. (2018). *Supporting information to the characterisation factors of recommended EF Life Cycle Impact Assessment methods*. JRC Technical Report JRC114822. European Commission Joint Research Centre. |
+| **License** | **CC BY 4.0** (EU institutional content under EC Decision 2011/833/EU) |
+| **Commercial use** | ✓ Yes — reuse authorised with source acknowledgement |
+| **Attribution required** | Yes — "Source: European Commission, Joint Research Centre" |
+| **License URL** | https://commission.europa.eu/legal-notice_en; https://publications.jrc.ec.europa.eu/repository/handle/JRC114822 |
+
+---
+
+#### 8.9 ExternE / NEEDS (2008) — VOLY Foundation
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Value of Life Year Lost (VOLY) underpinning — the EUR 85,000/VOLY central value originates from this EU-funded research programme |
+| **Full citation** | European Commission FP6 (2008). *NEEDS — New Energy Externalities Developments for Sustainability* (Project ID: 502687). Final report. EC Research DG, Brussels. |
+| **License** | **EU Publication copyright** — EU-funded project; reports freely available from Publications Office of the EU; non-commercial academic reuse permitted with attribution |
+| **Commercial use** | Non-commercial academic/policy use: permitted with attribution |
+| **Attribution required** | Yes — cite NEEDS project / ExternE and European Commission |
+| **License URL** | https://op.europa.eu/en/publication-detail/-/publication/b2b86b52-4f18-4b4e-a134-b1c81ad8a1b2/language-en |
+
+---
+
+#### 8.10 EU Water Framework Directive — Priority Substance List
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Substance selection for Table 4 (water pollutants): the 22 substances are drawn from the EU WFD priority pollutants list |
+| **Full citation** | European Commission (2013). Directive 2013/39/EU amending Directives 2000/60/EC and 2008/105/EC as regards priority substances in water policy. *OJ L 226*, 1–17. |
+| **License** | **CC BY 4.0** (EU legal acts — freely reusable under EC Decision 2011/833/EU; EUR-Lex open access) |
+| **Commercial use** | ✓ Yes |
+| **Attribution required** | Yes — cite Directive 2013/39/EU with OJ reference |
+| **License URL** | https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32013L0039 |
+
+---
+
+#### 8.11 Eurostat — HICP for Temporal Value Transfer Guidance
+
+| Attribute | Detail |
+|---|---|
+| **Used for** | Recommended source for temporal value transfer of EU27 prices to other years: `VF(t) = VF(2021) × HICP(t) / HICP(2021)` |
+| **Full citation** | Eurostat (annual). *Harmonised Index of Consumer Prices (HICP)*. European Commission, Luxembourg. https://ec.europa.eu/eurostat/web/hicp |
+| **License** | **CC BY 4.0** (Eurostat / EC data under Decision 2011/833/EU) |
+| **Commercial use** | ✓ Yes — free reuse, adaptation, and redistribution including commercial |
+| **Attribution required** | Yes — "Source: Eurostat" |
+| **License URL** | https://ec.europa.eu/eurostat/help/copyright-notice |
 
 ---
 
