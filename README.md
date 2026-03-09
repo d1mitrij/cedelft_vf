@@ -66,14 +66,14 @@ Outputs are written to `output/` as both CSV and formatted Excel files.
 
 ## Table Groups
 
-| ID | Key | Source | Description | Rows | Unit |
-|----|-----|--------|-------------|------|------|
-| 01 | `air_pollutants` | Table 3 | Air emission prices: GHGs, classic pollutants, heavy metals, organics | 20 | EUR 2021/kg |
-| 02 | `water_pollutants` | Table 4 | Water emission prices: freshwater and saltwater | 44 | EUR 2021/kg |
-| 03 | `soil_pollutants` | Table 5 | Soil emission prices: metals, PAHs, nutrients | 21 | EUR 2021/kg |
-| 04 | `land_use` | Table 6 | Land-use occupation: biodiversity loss relative to natural state | 1 | EUR 2021/m²/year |
-| 05 | `midpoints_recipe` | Table 7 | ReCiPe 2016 midpoint prices for LCA (19 impact categories) | 19 | EUR 2021/unit |
-| 06 | `midpoints_pef` | Table 8 | PEF CAT I & II midpoint prices (EU27 + Netherlands) | 9 | EUR 2021/unit |
+| ID | Key | Source | Description | Rows | Unit | External sources |
+|----|-----|--------|-------------|------|------|-----------------|
+| 01 | `air_pollutants` | Table 3 | Air emission prices: GHGs, classic pollutants, heavy metals, organics | 20 | EUR 2021/kg | EEA/GAINS dispersion (2021); WHO CRFs; ReCiPe 2016 H |
+| 02 | `water_pollutants` | Table 4 | Water emission prices: freshwater and saltwater | 44 | EUR 2021/kg | EU Water Framework Directive priority list; ReCiPe 2016 H |
+| 03 | `soil_pollutants` | Table 5 | Soil emission prices: metals, PAHs, nutrients | 21 | EUR 2021/kg | CE Delft waste study (2022); ReCiPe 2016 H ecotoxicity |
+| 04 | `land_use` | Table 6 | Land-use occupation: biodiversity loss relative to natural state | 1 | EUR 2021/m²/year | Costanza et al. (2014); Kuik (2008) ecosystem services |
+| 05 | `midpoints_recipe` | Table 7 | ReCiPe 2016 midpoint prices for LCA (19 impact categories) | 19 | EUR 2021/unit | ReCiPe 2016 H (Huijbregts et al.); Eurostat emissions |
+| 06 | `midpoints_pef` | Table 8 | PEF CAT I & II midpoint prices (EU27 + Netherlands) | 9 | EUR 2021/unit | EC JRC Product Environmental Footprint (PEF) method |
 
 **Total: 114 value factor rows**
 
@@ -161,6 +161,45 @@ pip install openpyxl
 
 No PDF parsing or ML libraries required at runtime. All values are pre-transcribed
 from the handbook into `pipeline.py`.
+
+---
+
+## Value Transfer Mechanism
+
+**No value transfer is applied in this pipeline.**
+
+The CE Delft handbook derives environmental prices directly for the EU27 using the
+**Impact Pathway Approach (IPA)**: emission → dispersion model → concentration → dose-response
+function → endpoint damage × monetary value. Values are emission-weighted averages across
+EU27 emission sources and represent a direct empirical derivation, not a transfer from
+another study or geography.
+
+The three uncertainty variants (lower / central / upper) reflect variation in
+endpoint valuations (VOLY) and dose-response assumptions, not geographic transfer
+uncertainty.
+
+**If non-EU applications are required:** A value transfer step using purchasing power
+parity (PPP) or income elasticity adjustment would be needed. See METHODOLOGY.md §7
+for the geographic scope and applicability discussion.
+
+---
+
+## Relation to transitionvaluation
+
+| transitionvaluation convention | This project |
+|---|---|
+| `config.py` → table group definitions | ✓ `TABLE_GROUPS` dict |
+| `pipeline.run_table(key)` | ✓ identical signature |
+| Orchestrator script with `--only` / `--list` | ✓ `extract_cedelft_values.py` |
+| CSV (UTF-8, tidy/long format) + Excel output | ✓ same output pattern |
+| Timestamped execution log | ✓ `execution_log_*.txt` |
+| `Metadata` sheet in Excel | ✓ with full publication attribution |
+
+Unlike the WifOR/EPS/eQALY pipelines, this project produces **flat CSV/Excel tables**
+rather than `(Year, Variable) × (GeoRegion, NACE)` coefficient matrices. The values
+are static EU27 averages (no year- or country-dimension), making the coefficient matrix
+format unsuitable. The CSV output is designed for direct use in SCBA, LCA, and CSR
+pipelines.
 
 ---
 

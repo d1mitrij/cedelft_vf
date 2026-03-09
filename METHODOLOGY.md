@@ -264,7 +264,45 @@ between the Individualist and Egalitarian perspectives of ReCiPe 2016.
 
 ---
 
-## 8. Relation to Other Value Factor Systems
+## 8. Value Transfer
+
+**No value transfer is applied in the CE Delft Environmental Prices Handbook.**
+
+Environmental prices are derived using the **Impact Pathway Approach (IPA)** directly
+calibrated to EU27 conditions — population exposure, emission sources, dispersion
+meteorology, and receptor densities are all EU27-specific. The result is a single
+set of EU27 average values at EUR 2021 price levels.
+
+### Value transfer for non-EU use
+
+If these values are applied outside the EU27, a value transfer procedure is required.
+CE Delft documents the following guidance:
+
+| Transfer type | Approach | Key parameter |
+|---|---|---|
+| **Temporal** | Inflate using country-specific CPI or GDP deflator | Eurostat HICP (EU) |
+| **Geographic (income)** | Scale by income elasticity: `VF_country = VF_EU27 × (GNI_country / GNI_EU27)^ε` | Income elasticity ε = 0.3–1.0 (per VOLY variant) |
+| **Geographic (exposure)** | Adjust population exposure and emission density | Country-specific dispersion model required |
+
+The three uncertainty variants (lower / central / upper) embed different income
+elasticity assumptions (0.3, 0.65, 1.0) that indirectly capture some geographic
+income variation.
+
+### External sources used in derivation
+
+| Stage | External source | Role |
+|---|---|---|
+| Dispersion modelling | EEA/GAINS model (2021), SHERPA | Concentration mapping for air pollutants |
+| Dose-response | Chen & Hoek (2020); WHO HRAPIE (2013); IARC | CRFs for PM, NO₂, O₃, carcinogens |
+| Ecosystem valuation | Costanza et al. (2014); Kuik (2008) | Biodiversity / ecosystem service values |
+| Characterisation factors | ReCiPe 2016 H (Huijbregts et al. 2017) | Midpoint → endpoint; secondary pollutant prices |
+| PEF categorisation | EC JRC EF 3.0 (2018); EN 15804-A2 | CAT I/II assignment for Table 8 |
+| EU mortality valuation | VOLY — ExternE / NEEDS project (2008) | Value of Life Year Lost |
+| Water framework | EU WFD priority substances list | Table 4 substance selection |
+
+---
+
+## 9. Relation to Other Value Factor Systems
 
 | System | Organisation | Geographic scope | Currency | Year |
 |--------|-------------|-----------------|----------|------|
@@ -278,7 +316,7 @@ as the source for natural capital pollution valuation factors.
 
 ---
 
-## 9. Pipeline Extraction Approach
+## 10. Pipeline Extraction Approach
 
 ### Data Transcription
 
@@ -304,7 +342,7 @@ full publication attribution.
 
 ---
 
-## 10. Citation
+## 11. Citation
 
 When using these value factors in research or policy analysis, cite the original source:
 
